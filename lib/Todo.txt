@@ -1,0 +1,53 @@
+
+Tareas Pendientes
+****************************************************
+ - Manual de usuario
+ - Modo Edición (en grilla).
+ - problemas al tener dos grillas, la segunda grilla
+   toma parcialmente el estilo 
+ - Validaciones en metodos, ej si no se llamo a 
+   loadEnvironment, la biblioteca debe reclamar y
+   no caerse :( 
+ - renderFixPosition; este metodo debe ser capaz de 
+   redibujar la grilla dejando la fila o culumna 
+   indicada fija    
+ 
+ Tareas Terminadas (version 0.4) (version aun sin liberar)
+ ****************************************************
+ (25-09-2009) 
+ - Nuevo metodo de ordenamiento agregado (heapsort) 
+ - Se unifico metodo sort y sortGrid, ahora solo existe sortGrid   
+ - Funcion libPath (indica path de las librerias JS)
+   esto es para agregar solamente la libreria principal en el 
+   encabezado, las demas son cargadas por la misma libreria.
+ - se elimino metodo getDataFromXML y se remplazo por
+   getRemoteData, el cual procesa archivos de tipoXML y JSON
+ - se quitaron variables globales y se incorporaron como propiedades
+   de esta forma ahora es posible cargar más de una grilla en linea
+ - Se incorporo metodo "loadEnvironment" el cual hace de
+   "constructor" a falta de uno en javascript
+        
+  
+ 
+ Tareas Terminadas (version 0.3)
+ ****************************************************
+ - Tamaños individuales de columna (06-08-2009)
+ - El ancho total de la tabla debe quedar fijo y si se agranda una 
+   columna debe aparecer un scroll horizontal (06-08-2009)
+ - Lectura XML en Google Chrome. 
+ - Formato de celda por columna o fila o individual
+
+ Tareas Terminadas (version 0.2)
+ ****************************************************
+* Carga de XML de forma asincronica (13-05-2009)
+
+Tareas Terminadas (version 0.1)
+****************************************************
+* Seleccion de filas y celdas. (17-11-2008)
+* Columna "0" tipo Excel.
+* Corrección Problemas con ancho en FF3 y IE, ancho se comporta extraño. (08-01-2009)
+* Ordenar Columna destaca "icono" de orden (triangulo). (11-03-2009)
+* libreria cumple estandart W3C (12-03-2009)
+
+
+

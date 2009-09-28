@@ -1,0 +1,79 @@
+/*
+  TODO: Todos estos estilos deben ser dinamicos
+*/
+
+.matrix 
+{
+	border: 1px solid #808080;
+	vertical-align: 0;
+	background-color: #E5E5E5;
+	cursor: url(../img/cross_cursor.gif), crosshair;
+}
+/***************************************************************/
+.IndexHeaderColumn
+{
+	background-color: #99CC99;
+	border-bottom: 1px solid #E1E1E1;
+	border-top: 1px solid #FFFFFF;
+	text-align: center;
+	font-size: 11px;
+	color: #000000;
+}
+.headerColumn
+{
+	background-color: #99CC99;
+	border-bottom: 1px solid #E1E1E1;
+	font-size: 11px;
+	color: #000000;
+}
+.headerColumnOn
+{
+	background-color: #00FF99;
+	font-size: 12px;
+	color: #009900;
+}
+.cellSplit
+{
+	border-right: 1px solid #DFDDD7;
+	cursor: e-resize;
+}
+.ordenArrow
+{
+	font-size: 10px;
+	color: #ACA899;
+	text-align: right;
+}
+.ordenArrowActive
+{
+	font-size: 10px;
+	color: #33CCCC;
+	text-align: right;
+}
+.cell
+{
+	background-color: #FFFFFF;
+	font-size: 11px;
+	color: #000000;
+	border-bottom: 1px solid #DFDDD7;
+	border-right: 1px solid #DFDDD7;
+	text-align: left;
+} 
+/****************************************/
+
+
+.matrix_header
+{
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.matrix_body
+{
+	position: relative;
+	overflow: auto;
+	border: 0px solid #FF0000;
+}
+
+.cell, .matrix , .headerColumn, .ordenArrowActive, .ordenArrow, .cellSplit, .headerColumnOn, .matrix_header, .matrix_body {
+	font-family: arial;
+}

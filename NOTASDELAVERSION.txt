@@ -1,0 +1,19 @@
+NOTAS DE LA VERSION
+
+Características : 
+Versión 0.3 (07-08-2009):
+
+- Tamaños individuales de columna 
+- Lectura XML en Google Chrome. 
+- Formato de celda por columna o fila o individual
+
+Versión 0.2 (13-05-2009):
+- Carga de XML de forma asincronica 
+
+Versión 0.1 (13-03-2009):
+- Selección de valores de celda. 
+- Columna "0" tipo Excel.
+- Ancho de columna dinámico.
+- Columna auto ordenable.
+- Soporte Opera 9.64, Firefox 3.0.1 y IE7.
+
