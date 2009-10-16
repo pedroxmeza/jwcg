@@ -1,6 +1,23 @@
 NOTAS DE LA VERSION
 
-Características : 
+Características :
+
+Versión 0.4 (16-10-2009)
+ 
+- Correccion de problema al seleccionar celda
+- Nuevos metodos para extraccion de datos getCellValue y GetCellPos 
+- Nuevo metodo de ordenamiento agregado (heapsort) 
+- Se unifico metodo sort y sortGrid, ahora solo existe sortGrid   
+- Funcion libPath (indica path de las librerias JS)
+  esto es para agregar solamente la libreria principal en el 
+  encabezado, las demas son cargadas por la misma libreria.
+- se elimino metodo getDataFromXML y se remplazo por
+  getRemoteData, el cual procesa archivos de tipoXML y JSON
+- se quitaron variables globales y se incorporaron como propiedades
+  de esta forma ahora es posible cargar más de una grilla en linea
+- Se incorporo metodo "loadEnvironment" el cual hace de
+  "constructor" a falta de uno en javascript
+ 
 Versión 0.3 (07-08-2009):
 
 - Tamaños individuales de columna 

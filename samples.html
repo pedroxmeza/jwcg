@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>.:: Javascript Web Control Grid ::.</title>
+
+<script type="text/javascript" src="lib/webControlGrid.js"></script>
+<link rel="stylesheet" type="text/css" href="css/webControlGrid_default.css" title="def">
+<link rel="alternate stylesheet" type="text/css" href="css/webControlGrid_green.css" title="verde">
+
+<STYLE TYPE="text/css">
+	A {
+			font-size: 11px;
+			font-family: Arial;
+			color:yellow;
+			font-variant: small-caps;
+	
+	}
+	body {
+			background-color:rgb(0,96,127)
+	}
+	.texto{
+			font-size: 12px;
+			font-family: Arial;
+			color:white;
+			font-variant: small-caps;
+	}
+	.captura{
+			background-image:url("img/pix.png");
+			background-repeat: no-repeat;
+	}
+	#cuerpo {
+			background-image: url("img/disen.png");
+			background-repeat: no-repeat;
+			position:absolute;
+			top:50px;
+			left:5px;
+			height:620px;
+			
+	}
+	#descarga{
+			width:100%;
+			height:50px;
+			background-color: #293134;
+			color:white;
+			font-size:11px;
+			font-family: Arial;
+			position:absolute;
+			left:0px;
+			bottom:0px;
+			text-align:left;
+			border-top:1px solid white;
+			overflow:hidden;
+	}
+
+/*  ******** Estilos de la grilla *********** */
+	#matrix .jwcgCellX_4{
+		font-size:11px;
+		color:blue;
+		text-align:right;
+	}
+	#matrix .jwcgCellX_5{
+		text-align:right;
+	}
+	#matrix .jwcgCellX_2{
+		font-weight : bold;
+	}
+
+	
+</STYLE>
+
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+
+
+try {
+ var miTabla = new webControlGrid();
+ var miTabla2 = new webControlGrid();
+ } catch(e) {
+	alert("Error : 1."+e.description+", 2."+e);
+ 
+}
+window.onscroll = function() {
+	if (!(mov =  parseInt(document.documentElement.scrollTop)))
+		mov = parseInt(window.pageYOffset);
+		
+	mov = (mov)?mov:0;
+	mov *= (mov < 0 )?1:-1;
+	document.getElementById("descarga").style.bottom = String(mov)+"px"
+}
+function descargaTransparente() {
+	var descarga = document.getElementById("descarga");
+	descarga.style.opacity = "0.7";
+	descarga.style.filter="alpha(opacity=70)";
+}
+function setActiveStyleSheet(title) {
+  var i, a, main;
+  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+      a.disabled = true;
+      if(a.getAttribute("title") == title) a.disabled = false;
+    }
+  }
+}
+function traeCelda_1(){
+	
+	document.getElementById("valorCelda").value = miTabla.getCellValue();
+	
+	var pos = miTabla.getCellPos();
+	document.getElementById("XPos").value = pos.x + 1;
+	document.getElementById("YPos").value = pos.y + 1;
+
+}
+function traeCelda_2(){
+	
+	document.getElementById("valorCelda").value = miTabla2.getCellValue();
+	
+	var pos = miTabla2.getCellPos();
+	document.getElementById("XPos").value = pos.x + 1;
+	document.getElementById("YPos").value = pos.y + 1;
+
+}
+
+function dibuja(){
+			miTabla.libPath								="lib/";
+			miTabla.htmlContainer						= "Contenido"; 	// id del div donde debe ir el contenido
+			miTabla.objectName						= "miTabla"; 		// nombre del objeto 
+			miTabla.returnFunctionName			= "traeCelda_1"; 	// nombre de la funcion que se llamara para capturar la celda
+			miTabla.alternateColor					= true;		  
+			miTabla.alterColor1							= "#DFEEFD";
+			miTabla.alterColor2							= "#FFFFFF";
+			miTabla.setTableLayoutSize			= "700"
+			miTabla.setLabelColumn[0]				= "::Title::";
+			miTabla.setLabelColumn[1]				= "Artist";
+			miTabla.setLabelColumn[2]				= "Country";
+			miTabla.setLabelColumn[3]				= "Company";
+			miTabla.setLabelColumn[4]				= "Price";
+			miTabla.setLabelColumn[5]				= "Year";
+
+			miTabla.setTagNameInColumn[0]	= "TITLE";
+			miTabla.setTagNameInColumn[1]	= "ARTIST";
+			miTabla.setTagNameInColumn[2]	= "COUNTRY";
+			miTabla.setTagNameInColumn[3]	= "COMPANY";
+			miTabla.setTagNameInColumn[4]	= "PRICE";
+			miTabla.setTagNameInColumn[5]	= "YEAR";
+			
+			miTabla.setSizeColumn[0]				= "150";
+			miTabla.setSizeColumn[1]				= "150";
+			miTabla.setSizeColumn[2]				= "80";
+			miTabla.setSizeColumn[3]				= "150";
+			miTabla.setSizeColumn[4]				= "80";
+			miTabla.setSizeColumn[5]				= "80";
+			
+      miTabla.loadEnvironment();
+			setTimeout("miTabla.getRemoteData('cd_catalog.xml','xml')",100);
+			// **************************************************************
+			
+			miTabla2.libPath								="lib/";
+			miTabla2.htmlContainer						= "Contenido2"; 	// id del div donde debe ir el contenido
+			miTabla2.objectName						= "miTabla2"; 		// nombre del objeto 
+			miTabla2.id        						= "miTabla2"; 		// nombre del objeto
+			miTabla2.returnFunctionName			= "traeCelda_2"; 	// nombre de la funcion que se llamara para capturar la celda
+			miTabla2.alternateColor					= true;		  
+			miTabla2.alterColor1							= "#DFEEFD";
+			miTabla2.alterColor2							= "#FFFFFF";
+			miTabla2.setTableLayoutSize			= "700";
+			miTabla2.setTableLayoutHeight        = "150";
+			miTabla2.setLabelColumn[0]				= "::Title::";
+			miTabla2.setLabelColumn[1]				= "Artist";
+			miTabla2.setLabelColumn[2]				= "Country";
+			miTabla2.setLabelColumn[3]				= "Company";
+			miTabla2.setLabelColumn[4]				= "Price";
+			miTabla2.setLabelColumn[5]				= "Year";
+
+			miTabla2.setTagNameInColumn[0]	= "TITLE";
+			miTabla2.setTagNameInColumn[1]	= "ARTIST";
+			miTabla2.setTagNameInColumn[2]	= "COUNTRY";
+			miTabla2.setTagNameInColumn[3]	= "COMPANY";
+			miTabla2.setTagNameInColumn[4]	= "PRICE";
+			miTabla2.setTagNameInColumn[5]	= "YEAR";
+			
+			miTabla2.setSizeColumn[0]				= "150";
+			miTabla2.setSizeColumn[1]				= "150";
+			miTabla2.setSizeColumn[2]				= "80";
+			miTabla2.setSizeColumn[3]				= "150";
+			miTabla2.setSizeColumn[4]				= "80";
+			miTabla2.setSizeColumn[5]				= "80";
+			
+      miTabla2.loadEnvironment();
+			
+			setTimeout("miTabla2.getRemoteData('cd_catalog.xml','xml');",100);
+			
+			
+			
+			
+}
+
+
+</script>
+
+<body onload="dibuja(); descargaTransparente() " >
+
+<div id='cuerpo'>
+<TABLE  ALIGN="center" BORDER="0" cellpadding="2" cellspacing="2" WIDTH="250"  >
+	<TR>
+	<TD valign=top >
+		<TABLE WIDTH="100%" cellpadding="0" cellspacing="0"  BORDER="0" >
+		<TR>
+			<TD style="height:210px" valign="bottom">
+			<IMG SRC="img/pix.png" WIDTH="100%" HEIGHT="88" BORDER="0" ALT="" USEMAP="#estilos" >
+			<MAP NAME="estilos"> 
+				<AREA SHAPE=RECT  COORDS="19,0,155,25" HREF="javascript:miTabla.alterColor1= '#DFEEFD';miTabla.alterColor2='#FFFFFF';miTabla.render();setActiveStyleSheet('def')"  ALT="Default"  >
+				<AREA SHAPE=RECT  COORDS="19,30,155,55" HREF="javascript:miTabla.alterColor1= '#669999';miTabla.alterColor2='#669999';miTabla.render();setActiveStyleSheet('verde');"  ALT="Green Style">
+				<AREA SHAPE=RECT  COORDS="19,60,155,85" HREF="javascript:setActiveStyleSheet('niuna')"  ALT="whithout style"> 
+			</MAP>
+			</TD>	
+		</TR>
+		</table>
+		<TABLE WIDTH="100%" cellpadding="0" cellspacing="0"  class="captura" border=0>
+		<TR>
+			<TD WIDTH="10"></TD>
+			<TD valign="bottom" style="height:170px;">
+					<table BORDER="0" class="texto">
+							<tr>
+								<td>valor celda</td><td> :</td><td> <input type="text" value="" id='valorCelda' size=15 ></td>
+							</tr>
+							<tr>
+								<td>columna</td><td> :</td><td><input type="text" value="" id='XPos' size=15 ></td>
+							</tr>
+							<tr>
+								<td>fila</td><td> :</td><td><input type="text" value="" id='YPos'  size=15></td>
+							</tr>
+				</table>
+			<br>	<br>
+			</TD>
+		</TR>
+		</TABLE>
+	</TD>
+</TR>
+</TABLE>
+</div>
+
+<div  style="position:absolute;top:36px;left:270px;font-family:arial;color:white;font-size:12px" >Utilizando metodo processXML (Archivo cd_catalog.xml)</div>
+<div  id="Contenido" style="position:absolute;top:55px;left:270px">
+	<span class="texto">Cargando Tabla, esto puede tardar unos minutos...<br><br></span>
+	<IMG SRC="img/loading.gif" WIDTH="200" HEIGHT="8" BORDER="0" ALT="">
+</div>
+
+<div  style="position:absolute;top:444px;left:270px;font-family:arial;color:white;font-size:12px" >Utilizando metodo processJSON (Archivo cd_catalog.jsn)</div>
+<div  id="Contenido2" style="position:absolute;top:460px;left:270px">
+	<span class="texto">Cargando Tabla, esto puede tardar unos minutos...<br><br></span>
+	<IMG SRC="img/loading.gif" WIDTH="200" HEIGHT="8" BORDER="0" ALT="">
+</div>
+
+
+<div id='descarga' > 
+			<table WIDTH="100%" border=0  cellpadding="0" cellspacing="2" >
+				<tr>
+					<td valign=top>
+						<TABLE cellpadding="0" cellspacing="2" width="100%">
+						<TR>
+							<TD width=150>Licencia</TD>
+							<TD width=10>:</TD>
+							<TD><a href="LICENCIA.txt">GPL</a></TD>
+						</TR>
+						<TR>
+							<TD>Descarga</TD>
+							<TD>:</TD>
+							<TD><a href="http://github.com/pedroxmeza/jwcg">GITHUB</a></TD>
+						</TR>
+						<TR>
+							<TD>Contacto</TD>
+							<TD>:</TD>
+							<TD><a href="mailto:pedroxmeza@gmail.com">pedroxmeza@gmail.com</a></TD>
+						</TR>
+						</table>
+					</td>
+				</tr>
+			</table>
+</div>
+
+
+</body>

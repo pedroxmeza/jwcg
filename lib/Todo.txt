@@ -12,9 +12,12 @@ Tareas Pendientes
    redibujar la grilla dejando la fila o culumna 
    indicada fija    
  
- Tareas Terminadas (version 0.4) (version aun sin liberar)
+ 
+ Tareas Terminadas (version 0.4) (16-10-2009)
  ****************************************************
- (25-09-2009) 
+ 
+ - Correccion de problema al seleccionar celda
+ - Nuevos metodos para extraccion de datos getCellValue y GetCellPos 
  - Nuevo metodo de ordenamiento agregado (heapsort) 
  - Se unifico metodo sort y sortGrid, ahora solo existe sortGrid   
  - Funcion libPath (indica path de las librerias JS)
