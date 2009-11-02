@@ -1,5 +1,5 @@
 var _aboutJWCG = { 
-  version     : "0.4 ( beta )",
+  version     : "0.4.1 ( beta )",
   description : "Javascrip Web Control Grid",
   author      : "Pedro Meza",
   email        : "pedroxmeza@gmail.com",
