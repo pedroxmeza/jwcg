@@ -117,7 +117,15 @@ function traeCelda_2(){
 	var pos = miTabla2.getCellPos();
 	document.getElementById("XPos").value = pos.x + 1;
 	document.getElementById("YPos").value = pos.y + 1;
-
+	
+}
+function busca(q) {
+        var oCol = document.getElementById("columna");
+        
+        miTabla.search(oCol.selectedIndex,q);
+}
+function borraResultados() {
+        miTabla.clearSearchResult();
 }
 
 function dibuja(){
@@ -240,7 +248,21 @@ function dibuja(){
 </TABLE>
 </div>
 
-<div  style="position:absolute;top:36px;left:270px;font-family:arial;color:white;font-size:12px" >Utilizando metodo processXML (Archivo cd_catalog.xml)</div>
+<div  style="position:absolute;top:12px;left:270px;font-family:arial;color:white;font-size:12px" >
+  Utilizando metodo processXML (Archivo cd_catalog.xml)
+  <br>
+  <select id = 'columna' style='border:1px solid gray;font-size:10px'>
+     <option selected>Title</option>
+     <option >Artist</option>
+     <option >Country</option>
+     <option >Company</option>
+     <option >Price</option>
+     <option >Year</option>
+  </select>
+  <input type='text' id='query' value="" style='border:1px solid gray;font-size:10px'>
+  <input type=button onClick="busca(document.getElementById('query').value)" value="Buscar" style='border:1px solid gray;font-size:10px'>
+  <input type=button onClick="borraResultados()" value="Borra resultados" style='border:1px solid gray;font-size:10px'>
+  </div>
 <div  id="Contenido" style="position:absolute;top:55px;left:270px">
 	<span class="texto">Cargando Tabla, esto puede tardar unos minutos...<br><br></span>
 	<IMG SRC="img/loading.gif" WIDTH="200" HEIGHT="8" BORDER="0" ALT="">
@@ -278,6 +300,4 @@ function dibuja(){
 				</tr>
 			</table>
 </div>
-
-
 </body>

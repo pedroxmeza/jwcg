@@ -12,6 +12,15 @@ Tareas Pendientes
    redibujar la grilla dejando la fila o culumna 
    indicada fija    
  
+
+ Tareas Terminadas  (0.4.1) (10-11-2009)
+ ****************************************************
+ - Se ircorpora metodos de búsqueda, archivo searchMethod.js 
+ - Limpia variables al dibujar grilla
+ - nuevo metodo getValueByPos (extrae contenido por posición)
+ - Falg para quitar orden de columnas
+ - Correcciones en el encabezado de la grilla (si el encabezado es texto o html)
+ 
  
  Tareas Terminadas (version 0.4) (16-10-2009)
  ****************************************************

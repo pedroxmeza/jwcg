@@ -2,6 +2,14 @@ NOTAS DE LA VERSION
 
 Características :
 
+Versión 0.4.1 (10-11-2009)
+
+- Se ircorpora metodos de búsqueda, archivo searchMethod.js 
+- Limpia variables al dibujar grilla
+- nuevo metodo getValueByPos (extrae contenido por posición)
+- Falg para quitar orden de columnas
+- Correcciones en el encabezado de la grilla (si el encabezado es texto o html)
+
 Versión 0.4 (16-10-2009)
  
 - Correccion de problema al seleccionar celda
