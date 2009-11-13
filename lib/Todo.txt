@@ -1,6 +1,9 @@
 
 Tareas Pendientes
 ****************************************************
+ - Existe un problema con la busqueda, cuando entra
+   por primera vez al metodo "clearSearchResult"
+   este modifica el ancho de la grilla
  - Manual de usuario
  - Modo Edición (en grilla).
  - problemas al tener dos grillas, la segunda grilla
@@ -13,6 +16,12 @@ Tareas Pendientes
    indicada fija    
  
 
+ Tareas Terminadas  (0.4.2) (13-11-2009)
+ ****************************************************
+ - Sistema de paginación 
+ - nuevo metodo "afterLoad" para llamar funciones 
+   despues de que la grilla se carge  
+  
  Tareas Terminadas  (0.4.1) (10-11-2009)
  ****************************************************
  - Se ircorpora metodos de búsqueda, archivo searchMethod.js 

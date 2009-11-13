@@ -2,12 +2,18 @@ NOTAS DE LA VERSION
 
 Características :
 
+Version 0.4.2 (13-11-2009)
+ 
+- Sistema de paginación, archivo Pagination.js 
+- nuevo metodo "afterLoad" para llamar funciones 
+  despues de que la grilla se carge
+
 Versión 0.4.1 (10-11-2009)
 
 - Se ircorpora metodos de búsqueda, archivo searchMethod.js 
 - Limpia variables al dibujar grilla
 - nuevo metodo getValueByPos (extrae contenido por posición)
-- Falg para quitar orden de columnas
+- Flag para quitar orden de columnas
 - Correcciones en el encabezado de la grilla (si el encabezado es texto o html)
 
 Versión 0.4 (16-10-2009)
