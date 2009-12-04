@@ -1,5 +1,4 @@
-
-Tareas Pendientes
+Tareas Pendientes 
 ****************************************************
  - Existe un problema con la busqueda, cuando entra
    por primera vez al metodo "clearSearchResult"
@@ -69,6 +68,3 @@ Tareas Terminadas (version 0.1)
 * Corrección Problemas con ancho en FF3 y IE, ancho se comporta extraño. (08-01-2009)
 * Ordenar Columna destaca "icono" de orden (triangulo). (11-03-2009)
 * libreria cumple estandart W3C (12-03-2009)
-
-
-
