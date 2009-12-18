@@ -2,6 +2,14 @@ NOTAS DE LA VERSION
 
 Características :
 
+Version 0.4.5 (18-12-2009)
+- Corrección problema con búsqueda en resultados
+
+Version 0.4.4  
+- Correcciónde problema con la busqueda, cuando entra
+  por primera vez al metodo "clearSearchResult"
+  este modificaba ancho de la grilla
+  
 Version 0.4.3 (03-12-2009)
 - Mejora en anchos dinamicos al tener páginación con muchos registros
 

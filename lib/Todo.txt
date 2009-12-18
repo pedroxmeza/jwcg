@@ -1,8 +1,5 @@
 Tareas Pendientes 
 ****************************************************
- - Existe un problema con la busqueda, cuando entra
-   por primera vez al metodo "clearSearchResult"
-   este modifica el ancho de la grilla
  - Manual de usuario
  - Modo Edición (en grilla).
  - problemas al tener dos grillas, la segunda grilla
@@ -13,7 +10,13 @@ Tareas Pendientes
  - renderFixPosition; este metodo debe ser capaz de 
    redibujar la grilla dejando la fila o culumna 
    indicada fija    
- 
+   
+   
+ Tareas Terminadas (4.0.3) 
+ ****************************************************
+  Existe un problema con la busqueda, cuando entra
+  por primera vez al metodo "clearSearchResult"
+  este modifica el ancho de la grilla
 
  Tareas Terminadas  (0.4.2) (13-11-2009)
  ****************************************************
